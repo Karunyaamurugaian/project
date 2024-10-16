@@ -1,0 +1,16 @@
+---
+ - name: install many software  at a time
+   hosts: ubuntu
+   vars:
+    package_list:
+     - nginx
+     - default-jdk
+     - mysql-server
+   tasks:
+     - name: installing software 
+       apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+        loop: "{{package_list}}"  
+     
