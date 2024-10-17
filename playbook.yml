@@ -9,7 +9,7 @@
         update_cache: yes
     - name: i am going to install apache2
       apt:
-        name=apache2 state=latest
+        name=apache2 state=present
     - name: i anm going to start my apache2
       service:
         name: apache2

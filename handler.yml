@@ -23,4 +23,4 @@
           when: ansible_os_family == "Amazon"
           service:
             name: httpd
-            state: stopped
+            state: restarted
